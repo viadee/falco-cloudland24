@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  falco:
+    image: falcosecurity/falco:latest
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/host/var/run/docker.sock
+      - /dev:/host/dev
+      - /proc:/host/proc:ro
+      - /boot:/host/boot:ro
+      - /lib/modules:/host/lib/modules:ro
+      - /usr:/host/usr:ro
+      - /etc:/host/etc:ro
+      - /var/log/falco_events.log:/var/log/falco_events.log
+      - ./config/falco.yaml:/etc/falco/falco.yaml
+      - ./config/falco_rules.yaml:/etc/falco/falco_rules.yaml
+      - ./rules/:/etc/falco/rules.d/
+    depends_on:
+      - falcosidekick
+
+  falcosidekick:
+    image: falcosecurity/falcosidekick
+    ports:
+      - 2801:2801
+    depends_on:
+      - falcosidekick-ui
+    environment:
+      - WEBUI_URL=http://falcosidekick-ui:2802
