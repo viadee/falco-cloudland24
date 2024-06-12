@@ -18,4 +18,14 @@
 --> Events auf der Konsole
 
  # 2. Falco Sidekick
-- 
+- compose.yml um falcosecurity/falcosidekick erweitern
+- falco-Konfiguration für Weboutput anpassen
+
+--> Vom Sidekick können Exportziele beliefert werden
+
+# 3. Falco Sidekick-UI
+Anzeige der Falco Events in einer einfachen UI
+- compose.yml um falcosecurity/falcosidekick-ui erweitern
+- Redis dient als Datenspeicher
+
+--> UI unter http://localhost:2802 admin:admin

@@ -14,7 +14,6 @@ services:
       - /var/log/falco_events.log:/var/log/falco_events.log
       - ./config/falco.yaml:/etc/falco/falco.yaml
       - ./config/falco_rules.yaml:/etc/falco/falco_rules.yaml
-      - ./rules/:/etc/falco/rules.d/
     depends_on:
       - falcosidekick
 
@@ -22,7 +21,3 @@ services:
     image: falcosecurity/falcosidekick
     ports:
       - 2801:2801
-    depends_on:
-      - falcosidekick-ui
-    environment:
-      - WEBUI_URL=http://falcosidekick-ui:2802
