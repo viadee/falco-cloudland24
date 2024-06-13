@@ -5,9 +5,11 @@
   - Ubuntu-Image:  https://www.osboxes.org/ubuntu/
   - Import VDI: https://www.makeuseof.com/how-to-import-vdi-file-into-virtualbox/
   - osboxes.org:osboxes.org
-- Git: 
+- Git 
   - sudo apt-get update; sudo apt install git
-  - git clone git@github.com:viadee/falco-cloudland24.git
+  - git clone https://github.com/viadee/falco-cloudland24.git
+- Docker
+  - https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 # 1. Falco
 - Setup Falco-Container: compose.yml
