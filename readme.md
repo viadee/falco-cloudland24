@@ -31,3 +31,9 @@ Anzeige der Falco Events in einer einfachen UI
 - Redis dient als Datenspeicher
 
 --> UI unter http://localhost:2802 admin:admin
+
+# Docker Hub Rate Limits
+100 pulls per 6 hours per IP address (https://docs.docker.com/docker-hub/download-rate-limit/)
+
+Einloggen, um Rate Limit zu vermeiden: docker login
+https://docs.docker.com/reference/cli/docker/login/
