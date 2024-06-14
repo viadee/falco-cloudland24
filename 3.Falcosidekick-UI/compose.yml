@@ -20,7 +20,7 @@ services:
   falcosidekick:
     image: falcosecurity/falcosidekick
     ports:
-      - 2801:2801
+      - 127.0.0.1:2801:2801
     depends_on:
       - falcosidekick-ui
     environment:
@@ -29,7 +29,7 @@ services:
   falcosidekick-ui:
     image: falcosecurity/falcosidekick-ui
     ports:
-      - 2802:2802
+      - 127.0.0.1:2802:2802
     depends_on:
       - redis
     environment:
@@ -38,4 +38,4 @@ services:
   redis:
     image: redislabs/redisearch:2.2.4
     ports:
-      - 6379:6379
+      - 127.0.0.1:6379:6379
