@@ -16,6 +16,7 @@ services:
       - ./config/falco_rules.yaml:/etc/falco/falco_rules.yaml
     depends_on:
       - falcosidekick
+    command: /usr/bin/falco -pc
 
   falcosidekick:
     image: falcosecurity/falcosidekick
