@@ -14,3 +14,4 @@ services:
       - /var/log/falco_events.log:/var/log/falco_events.log
       - ./config/falco.yaml:/etc/falco/falco.yaml
       - ./config/falco_rules.yaml:/etc/falco/falco_rules.yaml
+    command: /usr/bin/falco -pc
