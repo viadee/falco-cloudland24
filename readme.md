@@ -3,6 +3,7 @@
 - Linux-Umgebung
   - Virtual Box: https://www.virtualbox.org/wiki/Downloads
   - Ubuntu-Image:  https://www.osboxes.org/ubuntu/
+      - tested with 22.04 LTS
   - Import VDI: https://www.makeuseof.com/how-to-import-vdi-file-into-virtualbox/
   - `osboxes.org`:`osboxes.org`
 - Git 
